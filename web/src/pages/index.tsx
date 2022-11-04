@@ -27,7 +27,7 @@ export default function Home(props: HomeProps) {
 
       await navigator.clipboard.writeText(code)
 
-      alert('Bolão criado com sucesso, código foi copiado para a área de transferencia')
+      alert('Bolão criado com sucesso, código foi copiado para a área de transferência')
       setPoolTitle('')
 
     } catch (error) {
@@ -98,9 +98,22 @@ export default function Home(props: HomeProps) {
   )
 }
 
-export const getServerSideProps =async () => {
-  // const poolCountResponse = await api.get('pools/count')
-  // const guessCountResponse = await api.get('guesses/count')
+/* export async function getServerSideProps() {
+  const [poolCountResponse, guessCountResponse, usersCountResponse] = await Promise.all([
+    api.get('pools/count'),
+    api.get('guesses/count'),
+    api.get('users/count')
+  ])
+  return{
+    props:{
+      poolCount: poolCountResponse.data.count,
+      guessCount: guessCountResponse.data.count,
+      userCount: usersCountResponse.data.count
+    }
+  }
+}  */
+
+export const getStaticProps =async () => {
 
   const [poolCountResponse, guessCountResponse, usersCountResponse] = await Promise.all([
     api.get('pools/count'),
@@ -114,6 +127,8 @@ export const getServerSideProps =async () => {
       poolCount: poolCountResponse.data.count,
       guessCount: guessCountResponse.data.count,
       userCount: usersCountResponse.data.count
-    }
+    },
+    revalidate:60
   }
+  
 }
