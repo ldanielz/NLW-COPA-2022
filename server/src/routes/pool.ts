@@ -46,7 +46,6 @@ export async function poolRoutes(fastify: FastifyInstance) {
 
     return reply.status(201).send({ code })
   })
-
   fastify.post('/pools/join', {
     onRequest: [authenticate]
   }, async (request, reply) => {
@@ -103,7 +102,6 @@ export async function poolRoutes(fastify: FastifyInstance) {
 
 
   })
-
   fastify.get('/pools', {
     onRequest: [authenticate]
   }, async (request) => {
@@ -143,7 +141,6 @@ export async function poolRoutes(fastify: FastifyInstance) {
     })
     return { pools }
   })
-
   fastify.get('/pools/:id', {
     onRequest:[authenticate]
   },async (request) => {
