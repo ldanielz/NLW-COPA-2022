@@ -95,6 +95,9 @@ $ git clone https://github.com/ldanielz/NLW-COPA-2022.git
 # Acesse a pasta do Servidor Back-End
 $ cd server
 
+# Instale as dependências
+$ npm install
+
 # Inicie o servidor com Npm
 $ npm run dev
 
@@ -126,14 +129,6 @@ $ npm install
 $ npm run dev
 
 # A pagina WEB poderá ser acessada no endereço http://localhost:3000
-```
-```bash
-$ cd server # For Back-end server
-
-# Inicie o servidor com Npm
-$ npm run dev
-
-# O servidor estará rodando no endereço http://localhost:3333
 ```
 
 ## :memo: Licença ##
