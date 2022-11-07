@@ -36,7 +36,7 @@ Este projeto em React Native é um aplicativo para fazer bolões da Copa do Mund
 :heavy_check_mark: Mostrar ranking por Bolão;\
 :heavy_check_mark: Compartilhar Bolões com amigos;
 
-## :rocket: Technologies ##
+## :rocket: Tecnologias ##
 
 As seguintes ferramentas foram utilizadas neste projeto:
 
@@ -61,7 +61,7 @@ App Mobile:
 
 ## 📚️ Livrarias ##
 
-The following some libraries were used in this project:
+A seguir algumas bibliotecas foram usadas neste projeto:
 
 Back-end:
 - [Prisma](https://www.prisma.io/)
@@ -82,27 +82,45 @@ App Mobile:
 
 ## :white_check_mark: Requerimentos ##
 
-Before starting :checkered_flag:, you need to have [Git](https://git-scm.com) and [Node](https://nodejs.org/en/) installed.
+Antes de iniciar :checkered_flag:, você precisa ter [Git](https://git-scm.com) e [Node](https://nodejs.org/en/) instalados.
 
-## :checkered_flag: Starting ##
+## :checkered_flag: Iniciando ##
 
 ```bash
-# Clone this project
+# Clone este projeto
 $ git clone https://github.com/ldanielz/NLW-COPA-2022.git
+```
 
-# Install dependencies
-$ npm install
+```bash
+# Acesse a pasta do Servidor Back-End
+$ cd server
 
-# Access for App Mobile
+# Inicie o servidor com Npm
+$ npm run dev
+
+# O servidor estará rodando no endereço http://localhost:3333
+```
+
+```bash
+# Acesse a pasta do App Mobile
 $ cd mobile 
 
-# Run the project with Expo
+# Instale as dependências
+$ npm install
+
+# Inicie o projeto com Expo
 $ npx expo start
 
 # O servidor expo irá iniciar no endereço exp://localhost:19000
+# Você poderá escanear o QR Code com o que aparece no terminal aplicativo EXPO GO
 ```
+
 ```bash
-$ cd web # Access for Web Page
+# Acesse a pasta da página WEB
+$ cd web
+
+# Instale as dependências
+$ npm install
 
 # Run the project with Npm
 $ npm run dev
@@ -112,13 +130,13 @@ $ npm run dev
 ```bash
 $ cd server # For Back-end server
 
-# Run the project with Npm
+# Inicie o servidor com Npm
 $ npm run dev
 
 # O servidor estará rodando no endereço http://localhost:3333
 ```
 
-## :memo: License ##
+## :memo: Licença ##
 
 This project is under license from MIT. For more details, see the [LICENSE](LICENSE.md) file.
 
